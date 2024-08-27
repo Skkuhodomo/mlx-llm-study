@@ -13,8 +13,7 @@ Diffusion 모델은 데이터에 노이즈를 점진적으로 추가하거나, �
 
 Reverse process \(p\)는 노이즈 \(x_T\)로부터 데이터를 복원하는 과정이다. 이는 무작위 노이즈로부터 데이터를 생성하는 모델로 사용되므로, 이를 모델링하는 것이 필수적이다. 하지만 이 과정은 매우 복잡하기 때문에, \(p_\theta\)를 이용하여 이를 근사한다. 이 근사는 가우시안 전이(Gaussian transition)를 사용한 마르코프 연쇄(Markov chain) 형태로 이루어진다. 수식으로 표현하면 다음과 같다:
 
-\[p_\theta(\mathbf{x}_{0:T}) = p(\mathbf{x}_T) \prod^T_{t=1} p_\theta(\mathbf{x}_{t-1} \vert \mathbf{x}_t) \quad
-p_\theta(\mathbf{x}_{t-1} \vert \mathbf{x}_t) = \mathcal{N}(\mathbf{x}_{t-1}; \boldsymbol{\mu}_\theta(\mathbf{x}_t, t), \boldsymbol{\Sigma}_\theta(\mathbf{x}_t, t))\]
+$p_\theta(\mathbf{x}_{0:T}) = p(\mathbf{x}_T) \prod^T_{t=1} p_\theta(\mathbf{x}_{t-1} \vert \mathbf{x}_t) \quad p_\theta(\mathbf{x}_{t-1} \vert \mathbf{x}_t) = \mathcal{N}(\mathbf{x}_{t-1}; \boldsymbol{\mu}_\theta(\mathbf{x}_t, t), \boldsymbol{\Sigma}_\theta(\mathbf{x}_t, t))$
 
 
 
