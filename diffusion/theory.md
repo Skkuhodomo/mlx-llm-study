@@ -34,7 +34,7 @@ q(\mathbf{x}_{1:T} \vert \mathbf{x}_0) = \prod^T_{t=1} q(\mathbf{x}_t \vert \mat
 q(x_t | x_0) \sim \mathcal{N}(\sqrt{\bar{\alpha}_t} x_0, (1-\bar{\alpha}_t)\mathbf{I})
 ```
 
-여기서 \(\bar{\alpha}_t\)는 다음과 같이 정의된다:
+여기서 $\bar{\alpha}_t$는 다음과 같이 정의된다:
 
 ```math
 \bar{\alpha}_t = \prod_{s=1}^t \alpha_s
